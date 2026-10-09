@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#102e21">
+  <title>TouchGrass AI — Reconnect with Nature</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="#" class="logo">🌿 touchgrass<span>.ai</span></a>
+    <a href="#missions" class="nav-link">Explore ↗</a>
+  </nav>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-content">
+        <span class="tag">✳ YOUR DAILY NATURE RESET</span>
+        <h1>Less screen.<br>More <em>green.</em></h1>
+        <p>Step outside, discover something beautiful, and make your everyday adventures count.</p>
+        <a href="#missions" class="btn">Start exploring ↗</a>
+        <p class="small-note">🌱 One small adventure at a time.</p>
+      </div>
+
+      <div class="hero-art">
+        <div class="sun"></div>
+        <div class="hill hill-back"></div>
+        <div class="hill hill-front"></div>
+        <div class="plant">🌿</div>
+        <span class="art-label">GO WHERE THE GREEN IS</span>
+      </div>
+    </section>
+
+    <section class="stats">
+      <article class="stat">
+        <span class="stat-icon">🌱</span>
+        <p>TOTAL EXPERIENCE</p>
+        <h2 id="xp">0 <small>XP</small></h2>
+      </article>
+      <article class="stat">
+        <span class="stat-icon">🎯</span>
+        <p>MISSIONS COMPLETED</p>
+        <h2 id="completed">0</h2>
+      </article>
+      <article class="stat">
+        <span class="stat-icon">🔥</span>
+        <p>DAY STREAK</p>
+        <h2 id="streak">0</h2>
+      </article>
+    </section>
+
+    <section class="section" id="missions">
+      <div class="section-heading">
+        <div>
+          <span class="tag">YOUR NEXT ADVENTURE</span>
+          <h2>Touch some grass<span>.</span></h2>
+        </div>
+        <span id="today" class="date"></span>
+      </div>
+      <div class="mission-grid" id="missionGrid"></div>
+    </section>
+
+    <section class="ai-section" id="nature-ai">
+      <div class="ai-heading">
+        <div class="ai-icon">✳</div>
+        <div>
+          <span class="tag">OPEN-SOURCE AI</span>
+          <h2>Nature detective</h2>
+          <p>Found something interesting? Let AI explore it with you.</p>
+        </div>
+      </div>
+
+      <label class="upload-box" for="photo">
+        <span class="camera">📷</span>
+        <strong>Upload a nature photo</strong>
+        <span>Choose a leaf, flower, landscape, or bird image</span>
+        <input type="file" id="photo" accept="image/*" hidden>
+      </label>
+
+      <div id="previewArea" hidden>
+        <img id="preview" alt="Selected nature photo">
+        <button id="analyze" class="btn">✨ Analyze with AI</button>
+      </div>
+      <p id="status" class="status">Your photo is processed in your browser using an open-weight model.</p>
+      <div id="results" class="results" hidden></div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <div>
+          <span class="tag">MOMENTS WORTH REMEMBERING</span>
+          <h2>Your nature journal<span>.</span></h2>
+        </div>
+      </div>
+
+      <form id="journalForm" class="journal-form">
+        <input id="journalInput" maxlength="140"
+          placeholder="What did you discover outside today?" required>
+        <button class="btn" type="submit">Add entry +</button>
+      </form>
+      <div id="journalEntries"></div>
+    </section>
+
+    <footer>
+      <span>🌿 Built for life beyond the screen.</span>
+      <span>HTML · CSS · JavaScript · Open-source AI</span>
+    </footer>
+  </main>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
